@@ -11,19 +11,21 @@ import java.io.IOException;
 
 class Main {
   public static void main(String[] args) {
+    Service s = new Service();
     try {
-      Service s = new Service();
+
       Scanner imie = new Scanner(System.in);
       Scanner wiek = new Scanner(System.in);
       Scanner choice = new Scanner(System.in);
       System.out.println("1. DODAJ NOWEGO STUDENTA\n2. WYPISZ STUDENTÓW \n0. WYJŚCIE Z PROGRAMU");
       
       int wybor=choice.nextInt();
-      
+
       switch(wybor){
         case 0:
           break;
         case 1:
+
           System.out.println("Podaj imie: ");
           String i=imie.nextLine();
           System.out.println("Podaj wiek: ");
@@ -31,13 +33,14 @@ class Main {
           s.addStudent(new Student(i,w));
           break;
         case 2:
+   
           var students = s.getStudents();
-          for(Student current : students) {
+          for(Student current : students)
             System.out.println(current.ToString());
           break;
       }
 
-      }
+    
     } catch (IOException e) {
 
     }
