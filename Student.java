@@ -11,7 +11,6 @@ public class Student {
     Name = name;
     Age = age;
   }
-
   public String GetName() {return Name;}
   public int GetAge() {return Age;}
 
