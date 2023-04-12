@@ -16,7 +16,7 @@ class Main {
       Scanner imie = new Scanner(System.in);
       Scanner wiek = new Scanner(System.in);
       Scanner choice = new Scanner(System.in);
-      System.out.println("1. DODAJ NOWEGO STUDENTA\n2. \n0. WYJŚCIE Z PROGRAMU");
+      System.out.println("1. DODAJ NOWEGO STUDENTA\n2. WYPISZ STUDENTÓW \n0. WYJŚCIE Z PROGRAMU");
       
       int wybor=choice.nextInt();
       
@@ -30,10 +30,13 @@ class Main {
           int w=wiek.nextInt();
           s.addStudent(new Student(i,w));
           break;
+        case 2:
+          var students = s.getStudents();
+          for(Student current : students) {
+            System.out.println(current.ToString());
+          break;
       }
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
+
       }
     } catch (IOException e) {
 
