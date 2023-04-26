@@ -17,6 +17,7 @@ class Main {
       Scanner imie = new Scanner(System.in);
       Scanner wiek = new Scanner(System.in);
       Scanner choice = new Scanner(System.in);
+      Scanner nazwisko = new Scanner(System.in);
       System.out.println("1. DODAJ NOWEGO STUDENTA\n2. WYPISZ STUDENTÓW \n0. WYJŚCIE Z PROGRAMU");
       
       int wybor=choice.nextInt();
@@ -28,9 +29,12 @@ class Main {
 
           System.out.println("Podaj imie: ");
           String i=imie.nextLine();
+          System.out.println("Podaj nazwisko: ");
+          String n=nazwisko.nextLine();
           System.out.println("Podaj wiek: ");
           int w=wiek.nextInt();
-          s.addStudent(new Student(i,w));
+          
+          s.addStudent(new Student(i,n,w));
           break;
         case 2:
    
